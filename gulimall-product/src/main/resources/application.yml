@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    username: root
+    password: '023910'
+    url: jdbc:mysql://192.168.88.128:3306/mall_pms
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.88.128:8848
+    loadbalancer:
+      cache:
+        enabled: false
+  application:
+    name: gulimall-product
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+server:
+  port: 10000
+logging:
+  level:
+    com.ll.product: debug
+# 优先读取bootstrap.yaml中配置中心的配置
+#coupon:
+#  user:
+#    name: zhangsan
+#    age: 12
+

@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: gulimall-third-party
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.88.128:8848
+        namespace: b3955264-6080-4e52-a6e2-f5479bd755c1
+        file-extension: yaml
+#        extension-configs:
+#          - data-id: oss.yaml
+#            group: DEFAULT_GROUP
+#            refresh: true

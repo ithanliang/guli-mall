@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    username: root
+    password: '023910'
+    url: jdbc:mysql://192.168.88.128:3306/mall_ums
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.88.128:8848
+    loadbalancer:
+      cache:
+        enabled: false
+  application:
+    name: gulimall-member
+
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+server:
+  port: 8000
+
+# 优先读取bootstrap.yaml中配置中心的配置
+coupon:
+  user:
+    name: zhangsan
+    age: 12
